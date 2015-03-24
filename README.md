@@ -10,6 +10,7 @@ Simple require the module and [use]("http://socket.io/docs/server-api/#namespace
 ```
 var p2pserver = require('socket.io-p2p-server')
 var io = require('socket.io')(server);
+io.use(p2pserver)
 ```
 
 For example, in an express powered app, you can do the following:
