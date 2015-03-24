@@ -2,6 +2,11 @@
   "name": "socket.io-p2p-server",
   "version": "1.0.0",
   "description": "Server middleware to power socket.io-p2p. Handles signalling.",
+  "author": {
+    "name": "Tom Cartwright",
+    "email": "tecartwright@gmail.com",
+    "url": "http://tomcartwright.net"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha test/index.js"
@@ -14,7 +19,6 @@
     "webrtc",
     "peer-to-peer"
   ],
-  "author": "Tom Cartwright",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomcartwrightuk/socket.io-p2p-server/issues"
