@@ -18,7 +18,7 @@ For example, in an express powered app, you can do the following:
 ```
 var app = require('express')()
 var server = require('http').Server(app)
-var p2pserver = require('socket.io-p2p-server')
+var p2pserver = require('socket.io-p2p-server').Server
 var io = require('socket.io')(server)
 
 app.use(express.static(__dirname))
