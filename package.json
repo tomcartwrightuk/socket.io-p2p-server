@@ -1,6 +1,6 @@
 {
   "name": "socket.io-p2p-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Server middleware to power socket.io-p2p. Handles signalling.",
   "author": {
     "name": "Tom Cartwright",

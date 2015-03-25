@@ -8,7 +8,7 @@ The socket.io middleware that powers [socket.io-p2p](https://github.com/tomcartw
 Simple require the module and [use]("http://socket.io/docs/server-api/#namespace#use(fn:function):namespace") it.
 
 ```
-var p2pserver = require('socket.io-p2p-server')
+var p2pserver = require('socket.io-p2p-server').Server
 var io = require('socket.io')(server);
 io.use(p2pserver)
 ```
