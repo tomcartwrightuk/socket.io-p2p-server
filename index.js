@@ -33,8 +33,7 @@ function p2pSocket (socket, next, room) {
 
   socket.on('peer-signal', function (data) {
     var toPeerId = data.toPeerId
-    console.log("To peer id %s", toPeerId);
-    console.log(Object.keys(connectedClients));
+    debug('Signal peer id %s', toPeerId);
     var client = clients[toPeerId]
     client.emit('peer-signal', data)
   })
