@@ -28,3 +28,11 @@ server.listen(3030, function () {
   console.log("Listening on 3030")
 })
 ```
+
+It can also be used inside your connection logic so that you can specify a room that clients will communicate over:
+
+```
+p2pserver(socket, null, room)
+```
+
+Note that `null` must be passed as the second arguement when being used in this context.
