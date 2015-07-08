@@ -15,6 +15,10 @@ function p2pSocket (socket, next, room) {
 
   socket.on('disconnect', function () {
     delete clients[socket.id]
+    Object.keys(connectedClients).forEach(function (clientId, i) {
+      var client = clients[clientId]
+      client.emit('peer-disconnect', {peerId: socket.id})
+    })
     debug('Client gone (id=' + socket.id + ').')
   })
 
