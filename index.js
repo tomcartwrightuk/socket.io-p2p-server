@@ -28,9 +28,13 @@ function p2pSocket (socket, next, room) {
       var client = clients[clientId]
       if (client !== socket) {
         var offerObj = data.offers[i]
-        var emittedOffer = {fromPeerId: socket.id, offerId: offerObj.offerId, offer: offerObj.offer}
-        debug('Emitting offer: %s', JSON.stringify(emittedOffer))
-        client.emit('offer', emittedOffer)
+        if (offerObj) {
+          var emittedOffer = {fromPeerId: socket.id, offerId: offerObj.offerId, offer: offerObj.offer}
+          debug('Emitting offer: %s', JSON.stringify(emittedOffer))
+          client.emit('offer', emittedOffer)
+        } else {
+          console.log('No offer for connected client index of %s', i)
+        }
       }
     })
   })
