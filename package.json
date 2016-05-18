@@ -25,10 +25,15 @@
   },
   "homepage": "https://github.com/tomcartwrightuk/socket.io-p2p-server",
   "dependencies": {
+    "debug": "~2.1.2"
+  },
+  "devDependencies": {
     "chai": "~2.1.2",
-    "debug": "~2.1.2",
     "mocha": "~2.2.1",
     "sinon": "~1.14.1",
     "sinon-chai": "~2.7.0"
+  },
+  "peerDependencies": {
+    "socket.io": "^1.x.x"
   }
 }
