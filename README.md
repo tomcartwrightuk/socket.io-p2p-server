@@ -7,7 +7,7 @@ The socket.io middleware that powers [socket.io-p2p](https://github.com/tomcartw
 
 Simple require the module and [use]("http://socket.io/docs/server-api/#namespace#use(fn:function):namespace") it.
 
-```
+```javascript
 var p2pserver = require('socket.io-p2p-server').Server
 var io = require('socket.io')(server);
 io.use(p2pserver)
@@ -15,7 +15,7 @@ io.use(p2pserver)
 
 For example, in an express powered app, you can do the following:
 
-```
+```javascript
 var app = require('express')()
 var server = require('http').Server(app)
 var p2pserver = require('socket.io-p2p-server').Server
@@ -31,7 +31,7 @@ server.listen(3030, function () {
 
 It can also be used inside your connection logic so that you can specify a room that clients will communicate over:
 
-```
+```javascript
 p2pserver(socket, null, room)
 ```
 
