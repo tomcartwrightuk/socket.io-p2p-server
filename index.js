@@ -39,7 +39,9 @@ function p2pSocket (socket, next, room) {
     var toPeerId = data.toPeerId
     debug('Signal peer id %s', toPeerId);
     var client = clients[toPeerId]
-    client.emit('peer-signal', data)
+    if (client) {
+      client.emit('peer-signal', data)
+    }
   })
   typeof next === 'function' && next()
 }
